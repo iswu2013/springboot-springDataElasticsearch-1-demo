@@ -3,6 +3,7 @@ package com.ms;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -98,7 +99,7 @@ public class BootSpringDataEs1DemoApplicationTests {
 	//根据商品id查询
 	@Test
 	public void testFindByProdId() {
-		Product product = productService.findByProductId(1L);
+		Optional<Product> product = productService.findByProductId(1L);
 		try {
 			System.out.println("商品id查询数据: " + mapper.writeValueAsString(product));
 		} catch (JsonProcessingException e) {

@@ -1,6 +1,7 @@
 package com.ms.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -31,12 +32,12 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void deleteByProductId(long id) {
-		prodRepository.delete(id);
+		prodRepository.deleteById(id);
 	}
 
 	@Override
-	public Product findByProductId(long id) {
-		return prodRepository.findOne(id);
+	public Optional<Product> findByProductId(long id) {
+		return prodRepository.findById(id);
 	}
 
 	@Override

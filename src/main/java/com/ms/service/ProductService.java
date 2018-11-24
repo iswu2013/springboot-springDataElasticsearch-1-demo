@@ -1,6 +1,7 @@
 package com.ms.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -23,7 +24,7 @@ public interface ProductService {
 	//查询全部商品
 	Iterable<Product> findAll();
 	//根据商品id查询指定商品
-	Product findByProductId(long id);
+	Optional<Product> findByProductId(long id);
 	//根据商品名称查询商品，并分页
 	Page<Product> findByProductName(String name,PageRequest pageRequest);
 	//根据商品分类查询商品
