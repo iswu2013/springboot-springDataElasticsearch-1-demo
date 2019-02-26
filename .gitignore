@@ -1,3 +1,6 @@
+# should include this file
+!.mvn/wrapper/maven-wrapper.jar
+
 # Mac OSX
 .DS_Store 
 
